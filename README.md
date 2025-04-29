@@ -72,7 +72,8 @@ pip install -r requirements.txt
   }
   ```
 ## 💡 Usage Examples
-This project uses the [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp.git) repository as the base for building the server. In addition to the original features provided by `ida-pro-mcp`, I have also implemented several essential functional tools in this repository to suit specific requirements.
+This project uses the [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp.git) repository as the base for building the server. In addition to the original features provided by `ida-pro-mcp`, I have also implemented several essential functional tools in this repository to suit specific requirements.You should first open IDA Pro, then enable the MCP service in the plugins menu.
+![8caeddc9f2db9a4f6067de02b094721](https://github.com/user-attachments/assets/990fd40d-0738-473e-ad14-38da56ca1565)
 
 
 
