@@ -1,24 +1,20 @@
+
+
+
+
 # Security Agent 🛡️
 
 **Next-Gen Intelligent Binary Analysis Assistant**
-## Table of Contents
-
-- [Core Value](#-core-value)
-- [Key Features](#-key-features)
-- [Supported Platforms](#supported-platforms)
-- [Installation](#-installation)
-- [Configuration](#configuration)
-- [Usage Examples](#-usage-examples)
-- [Limitations](#-limitations)
-- [Next-Generation Roadmap](#-next-generation-roadmap)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-- [Contact](#contact)
-
----
-
+- [Security Agent 🛡️](-security-agent)
+  * [🎯 Core Value](#-core-value)
+  * [🚀 Key Features](#-key-features)
+    + [Cognitive Analysis Engine](#cognitive-analysis-engine)
+    + [Supported Platforms](#supported-platforms)
+  * [🛠️ Installation](-#--installation)
+    + [Configuration](#configuration)
+  * [💡 Usage Examples](#-usage-examples)
+  * [⚠️ Limitations](-#---limitations)
+  * [🚀 Next-Generation Roadmap](#-next-generation-roadmap)
 ## 🎯 Core Value
 Security Agent revolutionizes reverse engineering and vulnerability research through LLM-enhanced analysis:
 - 🧠 **AI-Powered RE** - Deep learning-based symbol recovery
@@ -41,14 +37,13 @@ Security Agent revolutionizes reverse engineering and vulnerability research thr
   - **Currently Supported:**  
     - Windows user-mode programs
   - **Planned:**  
-    - Other operating systems (e.g., Linux kernel-mode) will be supported in the future.
+    - Other operating systems (e.g., Linux kernel-mode) will be supported in the future.  
 
 ## 🛠️ Installation
 ```bash
 git clone https://github.com/your-repo/security-agent.git
 pip install -r requirements.txt
 ```
-
 ### Configuration
 ```python
 {
@@ -75,7 +70,6 @@ pip install -r requirements.txt
 ## 💡 Usage Examples
 
 ## ⚠️ Limitations
-
 - The current agent's chat window is limited to the current session and does **not** remember conversations from previous sessions.
 - Dynamic analysis is **not yet fully developed**.
 
@@ -97,3 +91,26 @@ Planned features for future releases include:
 
 5. **Self-Evolution Based on Tool Functionality and Documentation**  
    Enable large models to evolve autonomously by understanding tool features and development documentation, continuously adapting to and optimizing for specific toolchains.
+
+   
+## Troubleshooting
+
+If you encounter dependency conflicts with your Python environment, it is recommended to use a clean virtual environment:
+
+```bash
+python -m venv env
+# Windows
+.\env\Scripts\activate
+# macOS/Linux
+source env/bin/activate
+pip install -r requirements.txt
+```
+
+## Contributing
+This project is a personal weekend project independently developed by the author. External contributions are currently not accepted. If you have suggestions or ideas, feel free to contact the author for discussion.
+
+## License
+This project is licensed under the MIT License.
+## Contact
+Email: xjl_dut@163.com  
+WeChat: xjl_ucas
