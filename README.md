@@ -2,6 +2,10 @@
 
 
 
+
+
+
+
 # Security Agent 🛡️
 
 **Next-Gen Intelligent Binary Analysis Assistant**
@@ -69,6 +73,7 @@ pip install -r requirements.txt
   ```
 ## 💡 Usage Examples
 This project uses the [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp.git) repository as the base for building the server. In addition to the original features provided by `ida-pro-mcp`, I have also implemented several essential functional tools in this repository to suit specific requirements.
+https://github.com/user-attachments/assets/43bf887f-aee1-481e-8b07-216c2da36104
 
 ## ⚠️ Limitations
 - The current agent's chat window is limited to the current session and does **not** remember conversations from previous sessions.
