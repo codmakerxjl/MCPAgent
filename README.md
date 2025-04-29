@@ -49,27 +49,10 @@ git clone https://github.com/your-repo/security-agent.git
 pip install -r requirements.txt
 ```
 ### Configuration
-```python
-{
-    "OPENAI_CONFIG": {
-      "BASE_URL": "https://api.deepseek.com",
-      "API_KEY": "Your API Key",
-      "MODEL_NAME": "deepseek-chat"
-    },
-    "MCP_SERVER": [
-        {
-        "name": "File System Service",
-        "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-filesystem", "./sample_files"],
-        "files_path": "./sample_files"
-        }
-    ],
 
-    "AGENT_CONFIG": {
-      "name": "Security Intelligence Expert",
-      "instructions": "You are a professional computer security expert. You can use tools and answer user questions."
-    }
-  }
+
+```bash
+echo API_KEY="your-api" > .env
   ```
 ## 💡 Usage Examples
 This project uses the [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp.git) repository as the base for building the server. In addition to the original features provided by `ida-pro-mcp`, I have also implemented several essential functional tools in this repository to suit specific requirements.You should first open IDA Pro, then enable the MCP service in the plugins menu.
