@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/idalib_server.py
+src/server.py
+src/server_generated.py
+src/ida_pro_mcp.egg-info/PKG-INFO
+src/ida_pro_mcp.egg-info/SOURCES.txt
+src/ida_pro_mcp.egg-info/dependency_links.txt
+src/ida_pro_mcp.egg-info/entry_points.txt
+src/ida_pro_mcp.egg-info/requires.txt
+src/ida_pro_mcp.egg-info/top_level.txt

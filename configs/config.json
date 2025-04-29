@@ -16,14 +16,69 @@
         "command": "uvx",
         "args":["mcp-server-git"]
         },
+
         {
-        "name": "Weather Query Service",
-        "command": "uv",
-        "args": ["--directory",
-                "E:\\claudeTestEnv\\weather",
+            "name":"IDA Pro Service", 
+              "command": "uv",
+              "args": [
+                "--directory",
+                ".\\plugin_servers\\ida_pro_mcp\\src",
                 "run",
-                "weather.py"]
-        } 
+                "server.py",
+                "--install-plugin"
+              ],
+              "timeout": 1800,
+              "disabled": false,
+              "autoApprove": [
+                "check_connection",
+                "get_metadata",
+                "get_function_by_name",
+                "get_function_by_address",
+                "get_current_address",
+                "get_current_function",
+                "convert_number",
+                "list_functions",
+                "list_strings",
+                "search_strings",
+                "decompile_function",
+                "disassemble_function",
+                "get_xrefs_to",
+                "get_entry_points",
+                "set_comment",
+                "rename_local_variable",
+                "rename_global_variable",
+                "set_global_variable_type",
+                "rename_function",
+                "set_function_prototype",
+                "declare_c_type",
+                "set_local_variable_type"
+              ],
+              "alwaysAllow": [
+                "check_connection",
+                "get_metadata",
+                "get_function_by_name",
+                "get_function_by_address",
+                "get_current_address",
+                "get_current_function",
+                "convert_number",
+                "list_functions",
+                "list_strings",
+                "search_strings",
+                "decompile_function",
+                "disassemble_function",
+                "get_xrefs_to",
+                "get_entry_points",
+                "set_comment",
+                "rename_local_variable",
+                "rename_global_variable",
+                "set_global_variable_type",
+                "rename_function",
+                "set_function_prototype",
+                "declare_c_type",
+                "set_local_variable_type"
+              ]
+            
+          }
       
     ],
 

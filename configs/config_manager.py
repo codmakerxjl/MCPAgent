@@ -2,16 +2,13 @@ import json
 import os
 from pathlib import Path
 from typing import Dict, Any
-
+from dotenv import load_dotenv
+load_dotenv()
 class ConfigManager:
     def __init__(self, config_path: str = "configs/config.json"):
         self.config = self._load_config(config_path)
         self._validate_config()
-        self._convert_legacy_format()  # 【新增】兼容旧格式转换
-        
-
-
-
+        self._convert_legacy_format()  # [NEW] Compatible with legacy format conversion
 
     def _load_config(self, path: str) -> Dict[str, Any]:
         config_path = Path(__file__).parent.parent / path
@@ -28,30 +25,32 @@ class ConfigManager:
         for section in required_sections:
             if section not in self.config:
                 raise ValueError(f"Missing required config section: {section}")
-                # 【新增】验证 MCP_SERVER 为列表且包含必要字段
+        # [NEW] Validate MCP_SERVER is a list and contains required fields
         if not isinstance(self.config["MCP_SERVER"], list):
-            raise TypeError("MCP_SERVER 必须为列表类型")
-            
+            raise TypeError("MCP_SERVER must be a list type")
         for server in self.config["MCP_SERVER"]:
             required = ['name', 'command', 'args']
             missing = [field for field in required if field not in server]
             if missing:
-                raise ValueError(f"服务器配置 {server.get('name')} 缺失字段: {missing}")
-            
+                raise ValueError(f"Server config {server.get('name')} missing fields: {missing}")
+
     def _convert_legacy_format(self):
-        """【新增】兼容旧版单服务器配置格式"""
+        """[NEW] Compatible with legacy single-server config format"""
         if isinstance(self.config["MCP_SERVER"], dict):
             self.config["MCP_SERVER"] = [self.config["MCP_SERVER"]]
 
     @property
-    def mcp_config(self) -> list:  # 【修改】返回类型调整为列表
+    def mcp_config(self) -> list:  # [MOD] Return type changed to list
         return self.config["MCP_SERVER"]
 
     @property
     def openai_config(self) -> Dict[str, str]:
-        return self.config["OPENAI_CONFIG"]
-
-
+        # Copy the config and override API_KEY with env if present
+        cfg = self.config["OPENAI_CONFIG"].copy()
+        api_key = os.getenv("API_KEY")
+        if api_key:
+            cfg["API_KEY"] = api_key
+        return cfg
 
     @property
     def agent_config(self) -> Dict[str, str]:
