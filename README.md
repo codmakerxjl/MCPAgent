@@ -76,7 +76,9 @@ This project uses the [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp.git)
 
 
 
-https://github.com/user-attachments/assets/775d02a6-83f9-4861-8f40-62bc15e4071a
+
+https://github.com/user-attachments/assets/3676fafe-5ccb-4d03-8bc6-57ee934ce21f
+
 
 
 
