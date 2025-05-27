@@ -11,18 +11,13 @@
         "args": ["-y", "@modelcontextprotocol/server-filesystem", "./sample_files"],
         "files_path": "./sample_files"
         },
-        {
-        "name": "Git Service",
-        "command": "uvx",
-        "args":["mcp-server-git"]
-        },
-
+ 
         {
             "name":"IDA Pro Service", 
               "command": "uv",
               "args": [
                 "--directory",
-                ".\\plugin_servers\\ida_pro_mcp\\src",
+                "./plugin_servers/ida_pro_mcp/src",
                 "run",
                 "server.py",
                 "--install-plugin"
