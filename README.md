@@ -46,13 +46,15 @@ Security Agent revolutionizes reverse engineering and vulnerability research thr
 ## 🛠️ Installation
 ```bash
 git clone https://github.com/your-repo/security-agent.git
-pip install -r requirements.txt
+pip install -r requirements.txt (use venv is recommanded)
+pip install node
+pip install uv
 ```
 ### Configuration
 
 
 ```bash
-echo API_KEY="your-api" > .env
+Fill your api in config.json
   ```
 ## 💡 Usage Examples
 This project uses the [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp.git) repository as the base for building the server. In addition to the original features provided by `ida-pro-mcp`, I have also implemented several essential functional tools in this repository to suit specific requirements.You should first open IDA Pro, then enable the MCP service in the plugins menu.
